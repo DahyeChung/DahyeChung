@@ -40,7 +40,7 @@ import Extracurricular from "./components/Extracurricular";
 import Education from "./components/Education";
 import Resume from "./components/Resume";
 
-import profile from "./assets/profile.png";
+import profile from "./assets/images/profile.png";
 import Footer from "./components/Footer";
 
 const drawerWidth = 240;
@@ -113,6 +113,7 @@ type navigationType = {
 };
 
 // ✏️ navigation 데이터 편집
+// TODO : 메인 페이지 컨텐츠 순서 변경
 const internalNavigations: navigationType[] = [
   {
     title: "About Me",
@@ -128,12 +129,13 @@ const internalNavigations: navigationType[] = [
   },
   {
     title: "Resume",
-  },
+   },
+ 
 ];
 
 export default function App() {
   const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(true); // 네비게이션 바 디폴트 상태 
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -176,7 +178,7 @@ export default function App() {
             </IconButton>
             <Link href="#" sx={{ textDecoration: "none" }}>
               <Typography color="black" variant="h6" noWrap component="div">
-                포트폴리오
+                다혜 포트폴리오
               </Typography>
             </Link>
           </Toolbar>
@@ -273,7 +275,8 @@ export default function App() {
             ))}
           </List>
         </Drawer>
-        {/* 왼쪽 네비게이션 끝 */}
+              {/* 왼쪽 네비게이션 끝 */}
+              {/* TODO : 네비게이션 컨텐츠 순서 수정*/}
         <Main open={open}>
           <DrawerHeader />
             <AboutMe />

@@ -7,7 +7,7 @@ import {
 } from "@mui/material";
 import Carousel from "react-material-ui-carousel";
 import "./flipAnimation.css";
-import someImg from "../assets/profile.png";
+import someImg from "../assets/images/profile.png";
 
 /* 
 ✏️ 데이터 변경해주세요!
