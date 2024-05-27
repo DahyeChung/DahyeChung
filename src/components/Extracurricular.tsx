@@ -7,15 +7,18 @@ import {
 } from "@mui/material";
 import Carousel from "react-material-ui-carousel";
 import "./flipAnimation.css";
-import someImg from "../assets/images/profile.png";
 import Title from "./Title";
+
+// import images
+import someImg from "../assets/images/profile.png";
 
 /* 
 ✏️ 데이터 변경해주세요!
 
 * 권장 이미지 사이즈 200px x 300px
 
-개수를 변경하고 싶다면 아래 배열 안의 요소의 개수를 변경시켜주세요.
+데스크탑 사이즈에서 한 번에 보이는 이미지의 개수를 변경하고 싶다면 
+아래 배열 imagesForDesktop안의 데이터 개수를 변경하세요.
 
 */
 
