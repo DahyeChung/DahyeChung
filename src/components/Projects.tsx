@@ -123,7 +123,8 @@ function Projects() {
                   />
                   <CardContent
                     sx={{
-                      overflow: "scroll",
+                      overflow: "auto",
+                      scrollY: "auto",
                       display: "flex",
                       flexDirection: "column",
                       justifyContent: "space-between",
@@ -133,7 +134,7 @@ function Projects() {
                   >
                     <Typography
                       sx={{
-                        overflow: "scroll",
+                        overflow: "auto",
                       }}
                       mb="1.2rem"
                       variant="body1"
