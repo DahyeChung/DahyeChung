@@ -7,6 +7,9 @@ import {
 } from "@mui/material";
 import Carousel from "react-material-ui-carousel";
 import "./flipAnimation.css";
+import Title from "./Title";
+
+// import images
 import someImg from "../assets/images/profile.png";
 
 /* 
@@ -14,7 +17,8 @@ import someImg from "../assets/images/profile.png";
 
 * 권장 이미지 사이즈 200px x 300px
 
-개수를 변경하고 싶다면 아래 배열 안의 요소의 개수를 변경시켜주세요.
+데스크탑 사이즈에서 한 번에 보이는 이미지의 개수를 변경하고 싶다면 
+아래 배열 imagesForDesktop안의 데이터 개수를 변경하세요.
 
 */
 
@@ -26,11 +30,6 @@ type CarouselImagesType = {
 
 const imagesForDesktop: CarouselImagesType[][] = [
   [
-    {
-      title: "타이틀",
-      description: "해당 카드에 대한 설명",
-      imgPath: someImg,
-    },
     {
       title: "타이틀",
       description: "해당 카드에 대한 설명",
@@ -183,6 +182,7 @@ const imagesForMobile: CarouselImagesType[] = [
 ];
 
 function Extracurricular() {
+  // screen size
   const isMobile = useMediaQuery("(max-width:720px)");
   return (
     <Box mb="5rem" id="extracurricular">
@@ -195,9 +195,7 @@ function Extracurricular() {
           justifyContent: "space-evenly",
         }}
       >
-        <Typography variant="h2" fontWeight="bold">
-          Extracurricular
-        </Typography>
+        <Title title="Extracurricular" />
         <Carousel
           autoPlay={true}
           animation="slide"
@@ -215,7 +213,7 @@ function Extracurricular() {
                     marginRight: "8px",
                     maxWidth: "200px",
                     minHeight: "300px",
-                    margin:"auto"
+                    margin: "auto",
                   }}
                 >
                   <Box className="flip-card-inner">

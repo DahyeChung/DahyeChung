@@ -3,11 +3,11 @@ import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import { Button, Container, Typography } from "@mui/material";
-import { ReactElement } from "react";
 
 // import image
 import unity from "../assets/icons8-unity-100.png";
 import { ArrowCircleRightRounded } from "@mui/icons-material";
+import Title from "./Title";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -22,7 +22,7 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 type ResumeIcon = {
-  icon: ReactElement;
+  iconPath: string;
 };
 
 /*
@@ -34,37 +34,34 @@ type ResumeIcon = {
 
 const resumeIcons: ResumeIcon[] = [
   {
-    icon: <img src={unity} alt="unity" />,
+    iconPath: unity,
   },
   {
-    icon: <img src={unity} alt="unity" />,
+    iconPath: unity,
   },
   {
-    icon: <img src={unity} alt="unity" />,
+    iconPath: unity,
   },
   {
-    icon: <img src={unity} alt="unity" />,
+    iconPath: unity,
   },
   {
-    icon: <img src={unity} alt="unity" />,
+    iconPath: unity,
   },
   {
-    icon: <img src={unity} alt="unity" />,
+    iconPath: unity,
   },
   {
-    icon: <img src={unity} alt="unity" />,
+    iconPath: unity,
   },
   {
-    icon: <img src={unity} alt="unity" />,
-  },
-  {
-    icon: <img src={unity} alt="unity" />,
+    iconPath: unity,
   },
 ];
 
 export default function Resume() {
   return (
-    <Box id="resume" textAlign="center">
+    <Box id="resume" textAlign="center" mb="5rem">
       <Container
         sx={{
           minHeight: "calc(100vh - 120px)",
@@ -74,9 +71,7 @@ export default function Resume() {
           justifyContent: "center",
         }}
       >
-        <Typography variant="h2" mb="1.5rem" fontWeight="bold">
-          Résumé
-        </Typography>
+        <Title title="Résumé" mb="1.5rem" />
         <Typography textAlign="center" variant="body1" mb="1.2rem">
           resume 섹션에 대한 설명.
         </Typography>
@@ -95,13 +90,18 @@ export default function Resume() {
             spacing={{ xs: 2, md: 3 }}
             columns={{ xs: 6, sm: 8, md: 15 }}
           >
-            {resumeIcons.map(({ icon }, index) => (
+            {resumeIcons.map(({ iconPath }, index) => (
               <Grid item xs={2} sm={2} md={3} key={index}>
                 <Item
                   // ✏️ box shadow 조절, 숫자 값이 작을수록 섀도우 연함.
                   elevation={3}
                 >
-                  {icon}
+                  <img
+                    style={{ maxWidth: "100px", maxHeight: "100px" }}
+                    width="100%"
+                    src={iconPath}
+                    alt="unity"
+                  />
                 </Item>
               </Grid>
             ))}
