@@ -6,12 +6,39 @@ import ListItemText from "@mui/material/ListItemText";
 import Typography from "@mui/material/Typography";
 import { School } from "@mui/icons-material";
 import { Box, Container } from "@mui/material";
+import Title from "./Title";
+
+type EducationsType = {
+  title: string;
+  date: string;
+  contents: string;
+};
+
+// ✏️ education 데이터 수정
+const educations: EducationsType[] = [
+  {
+    title: "00학교",
+    date: "00.00.00",
+    contents: "blabla",
+  },
+  {
+    title: "00학교",
+    date: "00.00.00",
+    contents: "blabla",
+  },
+  {
+    title: "00학교",
+    date: "00.00.00",
+    contents: "blabla",
+  },
+];
 
 export default function Education() {
   return (
     <Box
       bgcolor="#072931"
       id="education"
+      mb="5rem"
       sx={{
         "&": {
           color: "white",
@@ -27,105 +54,56 @@ export default function Education() {
           justifyContent: "space-evenly",
         }}
       >
-        <Typography textAlign="center" variant="h2" fontWeight="bold">
-          Education
-        </Typography>
+        <Title title="Education" color="white" />
         <List sx={{ width: "100%" }}>
-          {/* 1번 education contents */}
-          <ListItem>
-            <School
-              style={{
-                marginRight: "1.2rem",
-              }}
-            />
-            <ListItemText
-              primary="00학교"
-              secondary={
-                <React.Fragment>
-                  <Typography
-                    // ✏️ 색상 변경
-                    color="gray"
-                    variant="body2"
-                  >
-                    {/* ✏️ 날짜 작성 */}
-                    00.00.00 - 00.00.00
-                  </Typography>
-                  <Typography
-                    // ✏️ 색상 변경
-                    color="white"
-                    variant="body2"
-                  >
-                    {/* ✏️ 활동 작성 */}
-                    00학과 전공
-                  </Typography>
-                </React.Fragment>
-              }
-            />
-          </ListItem>
-          <Divider variant="middle" component="li" />
-          {/* 2번 education contents */}
-          <ListItem>
-            <School
-              style={{
-                marginRight: "1.2rem",
-              }}
-            />
-            <ListItemText
-              primary="00학교"
-              secondary={
-                <React.Fragment>
-                  <Typography
-                    // ✏️ 색상 변경
-                    color="gray"
-                    variant="body2"
-                  >
-                    {/* ✏️ 날짜 작성 */}
-                    00.00.00 - 00.00.00
-                  </Typography>
-                  <Typography
-                    // ✏️ 색상 변경
-                    color="white"
-                    variant="body2"
-                  >
-                    {/* ✏️ 활동 작성 */}
-                    00학과 전공
-                  </Typography>
-                </React.Fragment>
-              }
-            />
-          </ListItem>
-          <Divider variant="middle" component="li" />
-          {/* 3번 education contents */}
-          <ListItem>
-            <School
-              style={{
-                marginRight: "1.2rem",
-              }}
-            />
-            <ListItemText
-              primary="00학교"
-              secondary={
-                <React.Fragment>
-                  <Typography
-                    // ✏️ 색상 변경
-                    color="gray"
-                    variant="body2"
-                  >
-                    {/* ✏️ 날짜 작성 */}
-                    00.00.00 - 00.00.00
-                  </Typography>
-                  <Typography
-                    // ✏️ 색상 변경
-                    color="white"
-                    variant="body2"
-                  >
-                    {/* ✏️ 활동 작성 */}
-                    00학과 전공
-                  </Typography>
-                </React.Fragment>
-              }
-            />
-          </ListItem>
+          {educations.map(({ title, date, contents }, idx) => {
+            return (
+              <Box key={`${title}-${idx}`}>
+                <ListItem>
+                  <School
+                    style={{
+                      marginRight: "1.2rem",
+                    }}
+                  />
+                  <ListItemText
+                    primary={title}
+                    primaryTypographyProps={{
+                      component: "h3",
+                      style: { fontSize: "20px" },
+                    }}
+                    secondary={
+                      <React.Fragment>
+                        <Typography
+                          // ✏️ 색상 변경
+                          color="gray"
+                          /* 
+                          ✏️
+                          크기 조절 variant
+                          h1 > h2 > h3 > h4 > h5 > h6
+                          body1 > body2 
+                          */
+                          variant="body1"
+                          component="span"
+                          display="block"
+                        >
+                          {date}
+                        </Typography>
+                        <Typography
+                          // ✏️ 색상 변경
+                          color="white"
+                          variant="body1"
+                          component="span"
+                        >
+                          {contents}
+                        </Typography>
+                      </React.Fragment>
+                    }
+                  />
+                </ListItem>
+                <Divider variant="middle" component="li" />
+              </Box>
+            );
+          })}
         </List>
       </Container>
     </Box>

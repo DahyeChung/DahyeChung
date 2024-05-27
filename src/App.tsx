@@ -128,13 +128,12 @@ const internalNavigations: navigationType[] = [
   },
   {
     title: "Resume",
-   },
- 
+  },
 ];
 
 export default function App() {
   const theme = useTheme();
-  const [open, setOpen] = React.useState(true); // 네비게이션 바 디폴트 상태 
+  const [open, setOpen] = React.useState(true); // 네비게이션 바 디폴트 상태
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -175,7 +174,7 @@ export default function App() {
             >
               <Menu style={{ color: "black" }} />
             </IconButton>
-            <Link href="#" sx={{ textDecoration: "none" }}>
+            <Link href="/" sx={{ textDecoration: "none" }}>
               <Typography color="black" variant="h6" noWrap component="div">
                 다혜 포트폴리오
               </Typography>
@@ -183,7 +182,7 @@ export default function App() {
           </Toolbar>
         </AppBar>
         {/* 왼쪽 네비게이션 영역 시작 */}
-        <Drawer
+        {/* <Drawer
           sx={{
             width: drawerWidth,
             flexShrink: 1,
@@ -197,7 +196,9 @@ export default function App() {
           anchor="left"
           open={open}
         >
-          <DrawerHeader sx={{ display: "flex", flexDirection: "column" }}>
+          <DrawerHeader
+            sx={{ display: "flex", flexDirection: "column", flexShrink: 0 }}
+          >
             <IconButton
               sx={{ alignSelf: "flex-end", margin: "0.5rem 0" }}
               onClick={handleDrawerClose}
@@ -273,16 +274,16 @@ export default function App() {
               </ListItem>
             ))}
           </List>
-        </Drawer>
-              {/* 왼쪽 네비게이션 끝 */}
-              {/* TODO : 네비게이션 컨텐츠 순서 수정*/}
+        </Drawer> */}
+        {/* 왼쪽 네비게이션 끝 */}
+        {/* TODO : 네비게이션 컨텐츠 순서 수정*/}
         <Main open={open}>
           <DrawerHeader />
-            <AboutMe />
-            <Projects />
-            <Extracurricular />
-            <Education />
-            <Resume />
+          <AboutMe />
+          <Projects />
+          <Extracurricular />
+          <Education />
+          <Resume />
           <Footer />
         </Main>
       </Box>

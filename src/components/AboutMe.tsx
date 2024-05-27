@@ -1,9 +1,11 @@
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Container, Typography, useMediaQuery } from "@mui/material";
 import formalprofile from "../assets/images/formalProfile.jpg";
+import Title from "./Title";
 
 function AboutMe() {
+  const isMobile = useMediaQuery("(max-width:720px)");
   return (
-    <Box id="about-me">
+    <Box id="about-me" mb="5rem">
       <Container
         sx={{
           display: "flex",
@@ -11,22 +13,18 @@ function AboutMe() {
           justifyContent: "center",
           flexDirection: "column",
           minHeight: "calc(100vh - 56px)",
-          position:"relative",
-          bottom:"80px",
+          position: "relative",
+          bottom: isMobile ? "0" : "80px",
         }}
       >
-        <Typography
-          mb="2rem"
-          fontWeight="bold"
-          // ✏️ textAlight: 텍스트 위치 설정 ex) left, center, right
-          textAlign="center"
-          variant="h2"
-        >
-          ABOUT ME
-        </Typography>
+        <Title mb="2rem" title="ABOUT ME" />
         <Box
           display="flex"
-          flexDirection={{ xs:"column-reverse", sm: "column-reverse", md: "row" }}
+          flexDirection={{
+            xs: "column-reverse",
+            sm: "column-reverse",
+            md: "row",
+          }}
           alignItems="center"
           justifyContent="center"
           gap="2rem"

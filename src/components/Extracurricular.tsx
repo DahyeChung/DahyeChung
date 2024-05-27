@@ -8,6 +8,7 @@ import {
 import Carousel from "react-material-ui-carousel";
 import "./flipAnimation.css";
 import someImg from "../assets/images/profile.png";
+import Title from "./Title";
 
 /* 
 ✏️ 데이터 변경해주세요!
@@ -26,11 +27,6 @@ type CarouselImagesType = {
 
 const imagesForDesktop: CarouselImagesType[][] = [
   [
-    {
-      title: "타이틀",
-      description: "해당 카드에 대한 설명",
-      imgPath: someImg,
-    },
     {
       title: "타이틀",
       description: "해당 카드에 대한 설명",
@@ -183,6 +179,7 @@ const imagesForMobile: CarouselImagesType[] = [
 ];
 
 function Extracurricular() {
+  // screen size
   const isMobile = useMediaQuery("(max-width:720px)");
   return (
     <Box mb="5rem" id="extracurricular">
@@ -195,9 +192,7 @@ function Extracurricular() {
           justifyContent: "space-evenly",
         }}
       >
-        <Typography variant="h2" fontWeight="bold">
-          Extracurricular
-        </Typography>
+        <Title title="Extracurricular" />
         <Carousel
           autoPlay={true}
           animation="slide"
@@ -215,7 +210,7 @@ function Extracurricular() {
                     marginRight: "8px",
                     maxWidth: "200px",
                     minHeight: "300px",
-                    margin:"auto"
+                    margin: "auto",
                   }}
                 >
                   <Box className="flip-card-inner">
