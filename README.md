@@ -5,7 +5,21 @@
 1. node, yarn 설치
 ```
 터미널에 node -v, yarn -v 입력 시,  버전이 뜨면 설치 되어있는 상태.
+
 ```
+설치가 안되어있다면...
+### node 설치
+https://nodejs.org/en/download/prebuilt-installer 로 이동 후 18.20.3 (LTS) 다운로드
+
+<img width="600" alt="스크린샷 2024-05-26 오후 2 25 54" src="https://github.com/liMoHa/outsourcing-portfolio-dh/assets/88691881/8bf38ce0-da71-4e5c-a419-08a0da81e825">
+
+### yarn 설치
+node설치 시 같이 제공되는 npm을 이용하여 yarn 설치
+
+```
+npm install -g yarn
+```
+
 2. Repository 생성하기 ex) portfolio
    - 반드시 <strong>public</mark>으로 만들어야 함. readme.md는 생성 x 
 
@@ -22,6 +36,7 @@ git clone https://github.com/liMoHa/outsourcing-portfolio-dh.git (클론받기)
 ```bash
 mv outsourcing-portfolio-dh {2번에서 생성한 리포 이름} (클론 받아온 폴더 이름을 앞으로 새로운 저장소가 될 리포 이름(2번에서 생성)으로 수정)
 ex) mv outsourcing-portfolio-dh my-portfolio
+윈도우는 mv 대신 move
 ```
 
 ```
@@ -68,13 +83,8 @@ ex) "homepage": "https://DahyeChung.github.io/my-portfolio"
  “scripts”안에 "deploy": "gh-pages -d build" 가 적혀 있는지 확인
 
 ```
-![스크린샷 2024-05-26 오전 11 41 08](https://github.com/liMoHa/outsourcing-portfolio-dh/assets/88691881/e0ffbf4d-bab5-4f0a-8c48-18a12b9c3e32)
 
-3. github > my-portfolio > settings > pages > build and deployment에서 branch를 gh-pages로 변경
-
-![스크린샷 2024-05-26 오전 11 44 02](https://github.com/liMoHa/outsourcing-portfolio-dh/assets/88691881/81a5933d-5e40-401f-a0ea-4a2bbe46c94e)
-
-4. 터미널로 돌아와서 빌드 및 배포 명령어 입력
+3. 터미널로 돌아와서 빌드 및 배포 명령어 입력
 
 ```
 yarn build
@@ -86,11 +96,23 @@ yarn deploy
 yarn add gh-pages -D 로 gh-pages 설치하기 
 ```
 
+![스크린샷 2024-05-26 오전 11 41 08](https://github.com/liMoHa/outsourcing-portfolio-dh/assets/88691881/e0ffbf4d-bab5-4f0a-8c48-18a12b9c3e32)
+
+4. github > my-portfolio > settings > pages > build and deployment에서 branch를 gh-pages로 변경
+
+![스크린샷 2024-05-26 오전 11 44 02](https://github.com/liMoHa/outsourcing-portfolio-dh/assets/88691881/81a5933d-5e40-401f-a0ea-4a2bbe46c94e)
+
+
 5. 잠시 후 브라우저 url 입력 창에 {username}.github.io/{repository name}입력 ex) DahyeChung.github.io/my-portfolio
-   
+
+## 소스 및 데이터 수정 후 재배포 방법
+1. yarn start로 react 로컬 서버 실행 local:3000으로 접속해서 실시간으로 개발하며 확인
+2. 추가 개발이 완료 되었다면 변경사항 커밋
+3. yarn build
+4. yarn deploy
+5. 좀 기다렸다가 https://DahyeChung.github.io/DahyeChung 접속해서 변경사항 잘 적용됐는지 확인하기
 
 # 데이터 추가 및 수정
-∏
 1. ✏️를 코드 에디터 내에서 검색해주세요.
 2. 해당 부분을 원하는 대로 수정해주세요.
 <img src="https://github.com/liMoHa/outsourcing-portfolio-dh/assets/88691881/891b284d-a66e-4b5b-ac67-2b70f5af40f9" width="200px">
@@ -107,7 +129,3 @@ yarn add gh-pages -D 로 gh-pages 설치하기
 ![alt text](image-1.png)
 
 ![스크린샷 2024-05-26 오후 12 09 42](https://github.com/liMoHa/outsourcing-portfolio-dh/assets/88691881/71f4e988-fd2b-4320-bea6-3e8a79d74256)
-
-
-
-더 자세한 커스터마이징 방법이 궁금하다면 저에게 연락주세요 😊
