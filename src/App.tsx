@@ -181,7 +181,7 @@ export default function App() {
                 Dahye's Portfolio
               </Typography>
             </Link>
-          </Toolbar>
+          </Toolbar> 
         </AppBar>
         {/* 왼쪽 네비게이션 영역 시작 */}
         <Drawer
