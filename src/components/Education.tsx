@@ -17,20 +17,16 @@ type EducationsType = {
 // ✏️ education 데이터 수정
 const educations: EducationsType[] = [
   {
-    title: "00학교",
-    date: "00.00.00",
-    contents: "blabla",
+    title: "George Mason University",
+    date: "2020.9.01 ~",
+    contents: "Computer Game Design Major",
   },
   {
     title: "00학교",
     date: "00.00.00",
     contents: "blabla",
   },
-  {
-    title: "00학교",
-    date: "00.00.00",
-    contents: "blabla",
-  },
+
 ];
 
 export default function Education() {

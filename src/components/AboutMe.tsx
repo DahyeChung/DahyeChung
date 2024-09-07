@@ -40,7 +40,7 @@ function AboutMe() {
               marginBottom: "1.2rem",
             }}
             width="200px"
-            height="300px"
+            height="270px"
             src={formalprofile}
           />
         </Box>
