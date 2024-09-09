@@ -11,6 +11,10 @@ import Title from "./Title";
 
 // import images
 import someImg from "../assets/images/profile.png";
+// "../assets/images/extraCurricularImages/
+// gStar.png";
+// puritoCompetition.jpg";
+// sparkStudioCapture.png";
 
 /* 
 ✏️ 데이터 변경해주세요!
@@ -31,10 +35,10 @@ type CarouselImagesType = {
 const imagesForDesktop: CarouselImagesType[][] = [
   [
     {
-      title: "타이틀",
-      description: "해당 카드에 대한 설명",
+      title: "Spark Studio",
+      description: "Beauty Filter Contest",
       imgPath:
-        "https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60",
+        "../assets/images/extraCurricularImages/gStar.png",
     },
     {
       title: "타이틀",

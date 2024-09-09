@@ -17,14 +17,19 @@ type EducationsType = {
 // ✏️ education 데이터 수정
 const educations: EducationsType[] = [
   {
-    title: "George Mason University",
-    date: "2020.9.01 ~",
-    contents: "Computer Game Design Major",
+    title: "George Mason University, USA",
+    date: "09.01.2020 ~ Present",
+    contents: "BFA Computer Game Design",
   },
   {
-    title: "00학교",
-    date: "00.00.00",
-    contents: "blabla",
+    title: "University Of South Pacific, Fiji",
+    date: "20.02.2017 ~ 20.02.2017",
+    contents: "Foundation Science",
+  },
+  {
+    title: "Sacred Heart College, Fiji",
+    date: "01.02.2013 ~ 01.12.2016",
+    contents: "Secondary School",
   },
 
 ];
@@ -65,7 +70,7 @@ export default function Education() {
                     primary={title}
                     primaryTypographyProps={{
                       component: "h3",
-                      style: { fontSize: "20px" },
+                      style: { fontSize: "30px" },
                     }}
                     secondary={
                       <React.Fragment>

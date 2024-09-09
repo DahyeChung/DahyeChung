@@ -116,13 +116,13 @@ type navigationType = {
 // TODO : 메인 페이지 컨텐츠 순서 변경
 const internalNavigations: navigationType[] = [
   {
+    title: "About Me",
+  },
+  {
     title: "Projects",
   },
   {
     title: "Extracurricular",
-  },
-  {
-    title: "About Me",
   },
   {
     title: "Education",
@@ -280,12 +280,12 @@ export default function App() {
           </List>
         </Drawer>
               {/* 왼쪽 네비게이션 끝 */}
-              {/* TODO : 네비게이션 컨텐츠 순서 수정*/}
+              {/* ✏️ TODO : 페이지 컨텐츠 순서 수정*/}
         <Main open={open}>
           <DrawerHeader />
+            <AboutMe />
             <Projects />
             <Extracurricular />
-            <AboutMe />
             <Education />
             <Resume />
           <Footer />
