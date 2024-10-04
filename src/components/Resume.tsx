@@ -73,16 +73,16 @@ export default function Resume() {
       >
         <Title title="Résumé" mb="1.5rem" />
         <Typography textAlign="center" variant="body1" mb="1.2rem">
-          resume 섹션에 대한 설명.
+          Resume
         </Typography>
         <Button
           color="secondary"
-          href="https://dahyemi.notion.site/Dahye-Chung-b1f12508b55c49fc9fc5a002e49bd9b0?pvs=4"
+          href="https://docs.google.com/document/d/1xigaEXpYamTTwc0lrRE6dintLdeT2ydMyuakub9ThP8/edit"
           variant="outlined"
           startIcon={<ArrowCircleRightRounded />}
           sx={{ marginBottom: "1.5rem" }}
         >
-          이력서 보기
+          Check My Resume
         </Button>
         <Box textAlign="center">
           <Grid

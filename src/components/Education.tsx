@@ -18,13 +18,13 @@ type EducationsType = {
 const educations: EducationsType[] = [
   {
     title: "George Mason University",
-    date: "2020.9.01 ~",
+    date: "2020.9.01 ~ Present",
     contents: "Computer Game Design Major",
   },
   {
-    title: "00학교",
-    date: "00.00.00",
-    contents: "blabla",
+    title: "University of South Pacific",
+    date: "2016.02.01 ~ 2017.12.10",
+    contents: "Foundation Science Course",
   },
 
 ];

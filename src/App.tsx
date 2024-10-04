@@ -36,7 +36,7 @@ import {
 
 import AboutMe from "./components/AboutMe";
 import Projects from "./components/Projects";
-import Extracurricular from "./components/Extracurricular";
+// import Extracurricular from "./components/Extracurricular";
 import Education from "./components/Education";
 import Resume from "./components/Resume";
 
@@ -116,14 +116,14 @@ type navigationType = {
 // TODO : 메인 페이지 컨텐츠 순서 변경
 const internalNavigations: navigationType[] = [
   {
-    title: "Projects",
-  },
-  {
-    title: "Extracurricular",
-  },
-  {
     title: "About Me",
   },
+  {
+    title: "Projects",
+  },
+  // {
+  //   title: "Extracurricular",
+  // },
   {
     title: "Education",
   },
@@ -264,7 +264,7 @@ export default function App() {
               />
             </ListItem>
           </DrawerHeader>
-          <Divider>🔗</Divider>
+          <Divider>�</Divider>
           <List sx={{ marginTop: "1.2rem" }}>
             {internalNavigations.map(({ title }) => (
               <ListItem key={title} disablePadding>
@@ -280,12 +280,11 @@ export default function App() {
           </List>
         </Drawer>
               {/* 왼쪽 네비게이션 끝 */}
-              {/* TODO : 네비게이션 컨텐츠 순서 수정*/}
+              {/* ✏️ TODO : 페이지 컨텐츠 순서 수정*/}
         <Main open={open}>
           <DrawerHeader />
-            <Projects />
-            <Extracurricular />
             <AboutMe />
+            <Projects />
             <Education />
             <Resume />
           <Footer />
