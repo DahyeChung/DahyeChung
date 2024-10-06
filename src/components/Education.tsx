@@ -65,7 +65,7 @@ export default function Education() {
                     primary={title}
                     primaryTypographyProps={{
                       component: "h3",
-                      style: { fontSize: "20px" },
+                      style: { fontSize: "30px" },
                     }}
                     secondary={
                       <React.Fragment>

@@ -178,7 +178,7 @@ export default function App() {
             </IconButton>
             <Link href="#" sx={{ textDecoration: "none" }}>
               <Typography color="black" variant="h6" noWrap component="div">
-                Dahye's Portfolio
+                Dahye Chung Unity Game Developer 
               </Typography>
             </Link>
           </Toolbar> 

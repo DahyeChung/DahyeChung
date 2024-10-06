@@ -15,6 +15,7 @@ import {
 import { makeStyles } from "@mui/styles";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import Title from "./Title";
+import projectOvercooked from "../assets/images/projects/Overcooked.gif";
 import projectWaterMelon from "../assets/images/projects/WaterMelon.gif";
 import projectVR from "../assets/images/projects/VR.gif";
 import projectAR from "../assets/images/projects/AR.gif";
@@ -38,63 +39,87 @@ type ProjectType = {
   projectUrl: string;
 };
 
-const projects: ProjectType[] = [
+const projects: ProjectType[] = [ 
   {
-    title: "Overcooked (Overcook Clone)",
-    date: "Sep,2024 - Present",
-    gifUrl:
-      "https://user-images.githubusercontent.com/14011726/94132137-7d4fc100-fe7c-11ea-8512-69f90cb65e48.gif",
+    title: "Overcooked",
+    date: "Sep, 2024 - Present",
+    gifUrl: projectOvercooked,
     description:
-      "Engine/Language: Unity, C#\nTeam Size: 34\nProject Overview: Overcook clone set in George Mason University.\nRole: UI Lead\nKey Contributions: Designed an expandable structure using strategy patterns to handle frequent updates. Managed all game assets via the Resources folder.",
+      `Engine/Language: Unity, C# \n
+       Team Size: 34 \n
+       Project Overview: Overcook clone set in George Mason University.\n
+       Role: UI Programming Lead\n
+       Key Contributions: Designed an expandable structure using strategy patterns to handle frequent updates. Managed game assets via the Resources folder. This project will be completed in December.`,
     githubUrl: "https://www.naver.com",
     projectUrl: "",
   },
   {
     title: "Doran Doran Adventure",
-    date: "Apr,2024 - Aug,2024",
+    date: "Apr, 2024 - Aug, 2024",
     gifUrl: projectDoran,
     description:
-      "Engine/Language: Unity, C#\nTeam Size: 1\nProject Overview: Mobile game in the vampire survivor genre.\nRole: Solo Developer\nKey Contributions: Reduced scene complexity with minimal object placement and code-based controls. Managed assets via Addressables, implemented monster waves with boss summoning.",
+      `Engine/Language: Unity, C#\n
+       Team Size: 1\n
+       Project Overview: Mobile game in the vampire survivor genre.\n
+       Role: Solo Developer\n
+       Key Contributions: Reduced scene complexity with minimal object placement and code-based controls. Managed assets via Addressables, implemented monster waves with boss summoning.`,
     githubUrl: "https://github.com/DahyeChung/DoranDoran",
     projectUrl: "",
   },
   {
-    title: "Watermelon Game (Christmas Edition)",
-    date: "Dec,2023 - Jan,2024",
+    title: "Watermelon Game",
+    date: "Dec, 2023 - Jan, 2024",
     gifUrl: projectWaterMelon,
     description:
-      "Engine/Language: Unity, C#\nTeam Size: 3\nProject Overview: A mobile merge game inspired by Nintendo’s Suika Game, with a Christmas theme.\nRole: Developer\nKey Contributions: Developed object merging interactions, managed multiple objects using scriptable objects, and built a preview system for upcoming objects.",
+      `Engine/Language: Unity, C#\n
+       Team Size: 3\n
+       Project Overview: A mobile merge game inspired by Nintendo’s Suika Game, with a Christmas theme.\n
+       Role: Main Developer\n
+       Key Contributions: Developed object merging interactions, managed multiple objects using scriptable objects, and built a preview system for upcoming objects.`,
     githubUrl: "https://github.com/DahyeChung/Watermelon_Game",
     projectUrl: "",
   },
   {
     title: "Purito Beauty Filter",
-    date: "Sep,2023 - Oct,2023",
+    date: "Sep, 2023 - Oct, 2023",
     gifUrl: projectAR,
     description:
-      "Engine/Language: Spark AR Studio, Blueprint\nTeam Size: 3\nProject Overview: Instagram filter promoting Purito's cosmetics.\nRole: Developer\nKey Contributions: Created an interactive filter highlighting the product’s antibacterial properties using gamification.",
+      `Engine/Language: Spark AR Studio, Blueprint\n
+       Team Size: 3\n
+       Project Overview: Instagram filter promoting Purito's cosmetics.\n
+       Role: Main Developer\n
+       Key Contributions: Created an interactive filter highlighting the product’s antibacterial properties using gamification.`,
     githubUrl: "N/A",
     projectUrl: "",
   },
   {
     title: "VR Mason Metro",
-    date: "Sep,2023 - Nov,2023",
+    date: "Sep, 2023 - Nov, 2023",
     gifUrl: projectVR,
     description:
-      "Engine/Language: Unity, C#, Meta Quest 3, Open XR\nTeam Size: 3\nProject Overview: VR tour game teaching international students how to navigate Korea's subway system.\nRole: Developer\nKey Contributions: Developed immersive UI elements, using 360 footage for subway navigation.",
+      `Engine/Language: Unity, C#, Meta Quest 3, Open XR\n
+       Team Size: 3\n
+       Project Overview: VR tour game teaching international students how to navigate Korea's subway system.\n
+       Role: Main Developer\n
+       Key Contributions: Developed immersive UI elements, using 360 footage for subway navigation.`,
     githubUrl: "https://github.com/DahyeChung/VR-MasonMetro-2023.10",
     projectUrl: "",
   },
   {
     title: "Unreal Swim Game",
-    date: "Apr,2023 - Jun,2023",
+    date: "Apr, 2023 - Jun, 2023",
     gifUrl: projectUnreal,
     description:
-      "Engine/Language: Unreal Engine 5, Blueprint\nTeam Size: 3\nProject Overview: A simple collecting game in Unreal.\nRole: Developer for player movement, animation, and shooting system.\nKey Contributions: Implemented IK rigging, created a switchable first/third-person shooting system, added underwater sound effects.",
+      `Engine/Language: Unreal Engine 5, Blueprint\n
+       Team Size: 3\n
+       Project Overview: A simple collecting game in Unreal.\n
+       Role: Player movement, animation, and shooting system.\n
+       Key Contributions: Implemented IK rigging, created a switchable first/third-person shooting system, added underwater sound effects.`,
     githubUrl: "https://dev.azure.com/dchung28/CCL_C_SEA",
     projectUrl: "",
   },
 ];
+
 
 function Projects() {
   const classes = useStyles();
@@ -148,6 +173,7 @@ function Projects() {
                   <CardContent
                     sx={{
                       overflow: "auto",
+                     
                       scrollY: "auto",
                       display: "flex",
                       flexDirection: "column",
@@ -159,6 +185,7 @@ function Projects() {
                     <Typography
                       sx={{
                         overflow: "auto",
+                        whiteSpace: "pre-line",
                       }}
                       mb="1.2rem"
                       variant="body1"
