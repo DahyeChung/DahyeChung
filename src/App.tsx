@@ -38,7 +38,7 @@ import AboutMe from "./components/AboutMe";
 import Projects from "./components/Projects";
 // import Extracurricular from "./components/Extracurricular";
 import Education from "./components/Education";
-import Resume from "./components/Resume";
+// import Resume from "./components/Resume";
 
 import profile from "./assets/images/profile.png";
 import Footer from "./components/Footer";
@@ -127,9 +127,9 @@ const internalNavigations: navigationType[] = [
   {
     title: "Education",
   },
-  {
-    title: "Resume",
-   },
+  // {
+  //   title: "Resume",
+  //  },
  
 ];
 
@@ -178,7 +178,7 @@ export default function App() {
             </IconButton>
             <Link href="#" sx={{ textDecoration: "none" }}>
               <Typography color="black" variant="h6" noWrap component="div">
-                Dahye Chung Unity Game Developer 
+                Unity Game Developer 
               </Typography>
             </Link>
           </Toolbar> 
@@ -264,7 +264,7 @@ export default function App() {
               />
             </ListItem>
           </DrawerHeader>
-          <Divider>�</Divider>
+          <Divider></Divider>
           <List sx={{ marginTop: "1.2rem" }}>
             {internalNavigations.map(({ title }) => (
               <ListItem key={title} disablePadding>
@@ -286,7 +286,6 @@ export default function App() {
             <AboutMe />
             <Projects />
             <Education />
-            <Resume />
           <Footer />
         </Main>
       </Box>

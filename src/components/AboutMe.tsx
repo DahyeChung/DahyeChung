@@ -27,11 +27,14 @@ function AboutMe() {
         >
           {/* Adjust the maxWidth below to control the width of the text */}
           <Typography variant="h6" maxWidth="500px" flex={1}>
-            <span style={{ fontSize: "2.1em" }}>Dahye Chung</span> is a
-            passionate and seasoned Technical Game Developer, who is based in
-            Incheon, South Korea. Her passion for game development began at an
-            early age. She later graduated from George Mason University with a
-            Bachelor of Computer Game Design in Art and Visual Technology.
+            <span style={{ fontSize: "2.1em" }}>Dahye Chung</span> 
+is a passionate and skilled Technical Game Developer, currently a senior at G
+eorge Mason University, where she is completing her Bachelor’s degree in Computer Game 
+Design and Art and Visual Technology. With a strong enthusiasm for continuous learning, D
+ahye actively creates environments that foster her growth and consistently refines her techni
+cal skills to enhance her efficiency. She believes that well-crafted games can transcend mer
+e entertainment, shaping perspectives, conveying compelling stories, and creating connectio
+ns among people through immersive experiences.
           </Typography>
           <img
             alt="formalprofile"
